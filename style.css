@@ -70,3 +70,169 @@ img {
     display: flex;
     justify-content: left;
 }
+
+
+
+
+
+
+
+.hamburger-icons,
+.hamburger-icons::before,
+.hamburger-icons::after {
+    content: "";
+    display: block;
+    width: 1.4rem;
+    height: 0.2rem;
+    background-color: white;
+    position: absolute;
+    border-radius: 5rem;
+}
+
+.hamburger-menu {
+    padding: 0.6rem, 0.8rem;
+    position: relative;
+    display: flex;
+    position: absolute;
+    right: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburger-icons::before {
+    transform: translateY(-0.3rem)
+}
+
+.hamburger-icons::after {
+    transform: translateY(0.3rem)
+}
+
+.hamburger:checked+.hamburger-menu .hamburger-icons {
+    background: transparent;
+    transition: none;
+
+}
+
+.hamburger:checked+.hamburger-menu .hamburger-icons::before {
+    transform: rotate(-45deg)
+}
+
+.hamburger:checked+.hamburger-menu .hamburger-icons::after {
+    transform: rotate(45deg)
+}
+
+/* Kod till cards*/
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1 1 30%;
+    position: relative;
+    border: 1px solid #efefef;
+    box-shadow: 2px 6px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card-content {
+    padding: 30px 30px 110px;
+}
+
+.card-details {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+.card-details-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #efefef;
+    margin: 0 30px;
+    padding: 30px 0;
+}
+
+.card h1 {
+    margin: 0;
+}
+
+.card p {
+    margin: 0 0 30px;
+}
+
+.subtitle {
+    margin: 0 0 15px;
+    font-weight: 700;
+    color: #e76c67;
+}
+
+html {
+    line-height: 1.6;
+    font-family: 'Nunito', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    line-height: 1.2;
+}
+
+p,
+h1 {
+    color: #444;
+}
+
+.card a {
+    text-decoration: none;
+    color: #e76c67;
+}
+
+.card .button {
+    background-color: white;
+    color: black;
+    padding: 0.75rem 1rem;
+}
+
+.card .button:hover,
+.card .button:focus {
+    background-color: gray;
+    border: 1px solid darken(#e76c67, 10%);
+}
+
+.card-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.card-image1 {
+    background-image: url(Dicoverycard3.webp);
+}
+
+.card-image2 {
+    background-image: url(XC60_Black_Edition_640x480.webp);
+}
+
+.card-image3 {
+    background-image: url(ex90-hero-21x9-desktop_\(1\).webp);
+}
+
+.card-image4 {
+    background-image: url(Dicoverycard1.webp);
+}
+
+@media screen and (max-width:770px) {}
